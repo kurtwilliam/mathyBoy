@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+  </body>
+  <script>
+    // sierpenskis triangle
+    // method is chaos game
+    function draw(hue, x, y) {
+      c.fillStyle = `hsla(${hue},80%,80%,0.9)`;
+      c.fillRect(x, y, 10, 10);
+    }
+
+    function rand(range) {
+      return Math.floor(Math.random() * range);
+    }
+
+    function go(limit) {
+      for (var i = 0; i < limit; i++) {
+        draw(rand(1000), rand(500), rand(500));
+      }
+    }
+    // go(1000)
+  </script>
+</html>
